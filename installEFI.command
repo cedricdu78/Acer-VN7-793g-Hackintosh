@@ -6,7 +6,9 @@ then
         cp -r EFI /Volumes/EFI
         if [ $1 = 1 ]
         then
-            cp -r Bcm/*.kext /Volumes/EFI/EFI/CLOVER/kexts/Other
+            cp -r after/*.kext /Volumes/EFI/EFI/CLOVER/kexts/Other
+	else
+            cp -r before/*.kext /Volumes/EFI/EFI/CLOVER/kexts/Other
         fi
     }
 
@@ -15,7 +17,7 @@ then
     NC='\033[0m'
     printf "${RED}WARNING:${NC} Install bluetooth kexts after install macos !\n\n"
     PS3='Your choice: '
-    LISTE=("Install EFI with bluetooth kexts" "Install EFI without bluetooth kexts" "Exit")
+    LISTE=("Install EFI for system" "Install EFI for install" "Exit")
     select CHOIX in "${LISTE[@]}" ; do
         case $REPLY in
             1)
