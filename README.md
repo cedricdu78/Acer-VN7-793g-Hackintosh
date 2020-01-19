@@ -3,7 +3,7 @@
 
 ## macOS - Version
 
-Catalina: 10.15.1 (19B88)
+Catalina: 10.15.2 (19C57)
 
 
 ## How to Install
